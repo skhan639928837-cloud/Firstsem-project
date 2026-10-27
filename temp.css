@@ -1,0 +1,257 @@
+
+:root {
+    --blue: #2563eb;
+    --dark-blue: #1d4ed8;
+    --dark: #0f172a;
+    --text: #475569;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container,
+.nav-container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* 2. Section Heading */
+.section-title {
+    text-align: center;
+    color: var(--dark);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 10px;
+    margin: 12px auto 0;
+}
+
+/* 3. Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--dark);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+/* 4. Hero Section */
+.hero-section {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    padding: 80px 5%;
+    background:
+        radial-gradient(circle at 85% 20%, #dbeafe, transparent 35%),
+        linear-gradient(135deg, #ffffff, #eff6ff);
+}
+
+.hero-content {
+    width: min(1120px, 100%);
+    margin: auto;
+}
+
+.subtitle {
+    display: inline-block;
+    background: #dbeafe;
+    color: var(--dark-blue);
+    border-radius: 30px;
+    padding: 7px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    color: var(--dark);
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: var(--blue);
+}
+
+.hero-content h2 {
+    font-size: clamp(18px, 3vw, 25px);
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #334155;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin-bottom: 28px;
+    color: var(--text);
+}
+
+/* 5. Profile Photo */
+.background-image {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid white;
+    outline: 3px solid #bfdbfe;
+    box-shadow: 0 10px 35px #2563eb25;
+    margin-bottom: 25px;
+}
+
+/* 6. Buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid var(--blue);
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--dark-blue);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    color: var(--blue);
+    background: white;
+}
+
+.btn-secondary:hover {
+    background: #dbeafe;
+    transform: translateY(-3px);
+}
+
+/* 7. About Section */
+.about-grid {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-text {
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px #0f172a0b;
+}
+
+.about-text h3 {
+    color: var(--blue);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-text strong {
+    color: var(--dark);
+}
+
+.personal-info {
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.personal-info p {
+    overflow-wrap: anywhere;
+}
+
+/* 8. Skills Section */
+.skills-section {
+    background: var(--light);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
